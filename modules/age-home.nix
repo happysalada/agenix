@@ -208,7 +208,9 @@ in {
 
     launchd.agents.activate-agenix = {
       config = {
+        enable = true;
         ProgramArguments = [mountingScript];
+        RunAtLoad = true;
         KeepAlive = {
           Crashed = false;
           SuccessfulExit = false;
